@@ -30,7 +30,7 @@ export default Ember.Component.extend({
     },
     cancel(){
       console.log('nevermind');
-      this.cancel();
+      this.cancel(this.get('model'));
     }
   }
 });
