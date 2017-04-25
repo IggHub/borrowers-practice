@@ -8,7 +8,7 @@ export default DS.Model.extend({
   twitter: DS.attr('string'),
   fullName: Ember.computed('firstName', 'lastName', {
     get() {
-    return this.get('firstName') + ' ' + this.get('lastName');
+      return this.get('firstName') + ' ' + this.get('lastName');
     }
   })
 });
