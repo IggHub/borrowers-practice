@@ -1,4 +1,5 @@
 <div class="col-8 px2 mx-auto p1 h2 center">
+  <img src="http://www.fillmurray.com/200/200">
   <p class="">
     {{model.firstName}}
   </p>
@@ -11,10 +12,17 @@
   <p class="">
     {{model.twitter}}
   </p>
+  <p>
+    {{link-to "Lend article" "loans.new"}}
+  </p>
   <p class="">
     {{link-to "Edit info" "friends.edit" model}}
   </p>
   <p class="">
     <a href="#" {{action "delete" model}}>delete</a>
   </p>
+  <div class="flex-auto ml1 loans-container">
+    {{outlet}}
+  </div>
+
 </div>

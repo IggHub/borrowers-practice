@@ -6,6 +6,9 @@ export default DS.Model.extend({
   lastName: DS.attr('string'),
   email: DS.attr('string'),
   twitter: DS.attr('string'),
+
+  loans: DS.hasMany('loan'),
+
   fullName: Ember.computed('firstName', 'lastName', {
     get() {
       return this.get('firstName') + ' ' + this.get('lastName');
